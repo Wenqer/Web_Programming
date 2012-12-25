@@ -1,3 +1,4 @@
+/* Header */
 /* Верхняя часть*/
 #header {
 	text-align: center;
@@ -15,8 +16,9 @@
 	color: red;
 }
 
+/* Main Body */
 /*Стиль тайтла*/
-#MainTitle {
+.mainTitle {
 	text-align: center;
 	font-size: 30px;
 	text-decoration: underline;
@@ -24,18 +26,18 @@
 }
 
 /*Выравнивание по центру области с картинкой и текстом*/
-#ImageArea{
+.imageArea{
 	text-align: center;
 }
 
 /* Текст вокруг картинки*/
-#imageText {
+.imageText {
 	text-align: center;
 	margin: 0px 50px 0 50px;
 }
 
 /*Search panel*/
-#SearchArea {
+.searchArea {
 	text-align: center;
 	margin-top: 100px;
 }
