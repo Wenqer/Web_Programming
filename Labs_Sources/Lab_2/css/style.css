@@ -1,0 +1,52 @@
+/* Header */
+/* Верхняя часть*/
+#header {
+	text-align: center;
+}
+
+/* Основная менюшка */
+.headMenu {
+	color: red;
+	text-decoration: underline;
+}
+
+/* Продолжение основной менюшки, разделитель */
+#menuSpan {
+	text-decoration: none;
+	color: red;
+}
+
+/* Main Body */
+/*Стиль тайтла*/
+.mainTitle {
+	text-align: center;
+	font-size: 30px;
+	text-decoration: underline;
+	color: blue;
+}
+
+/*Выравнивание по центру области с картинкой и текстом*/
+.imageArea{
+	text-align: center;
+}
+
+/* Текст вокруг картинки*/
+.imageText {
+	text-align: center;
+	margin: 0px 50px 0 50px;
+}
+
+/*Search panel*/
+.searchArea {
+	text-align: center;
+	margin-top: 100px;
+}
+
+/*Footer area*/
+#footer {
+	text-align: center;
+	margin-top: 150px;
+	font-size: 12px;
+	text-decoration: underline;
+	color: brown;
+}
