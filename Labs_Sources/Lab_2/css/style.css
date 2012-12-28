@@ -1,52 +1,60 @@
-/* Header */
-/* Верхняя часть*/
-#header {
-	text-align: center;
+/*
+Theme for Lab 2
+Version 1.0.0
+Author: Rudenko Sergey;
+*/
+@import url("reset.css");
+
+/*Основные стили*/
+
+html {
+	height: 100%;
 }
 
-/* Основная менюшка */
-.headMenu {
-	color: red;
-	text-decoration: underline;
+body {
+	background: black;
+	font-family: Arial;
+	font-size: 14px;
+	min-height: 100%;
+	padding-top: 25px;
 }
 
-/* Продолжение основной менюшки, разделитель */
-#menuSpan {
+p {
+	font-size: 14px;
+	color: #8a8a8a;
+}
+
+a {
 	text-decoration: none;
-	color: red;
+	outline: none;
+	font-size: 14px;
 }
 
-/* Main Body */
-/*Стиль тайтла*/
-.mainTitle {
-	text-align: center;
-	font-size: 30px;
+a:hover {
 	text-decoration: underline;
-	color: blue;
+	outline: none;
+	font-size: 14px;
 }
 
-/*Выравнивание по центру области с картинкой и текстом*/
-.imageArea{
-	text-align: center;
+#wrap {
+	width: 780px;
+	margin: 0 auto;
+
 }
 
-/* Текст вокруг картинки*/
-.imageText {
-	text-align: center;
-	margin: 0px 50px 0 50px;
+#mainBody {
+	background-image: url("../img/main_bg.png");
+	background-repeat: no-repeat;
 }
 
-/*Search panel*/
-.searchArea {
-	text-align: center;
-	margin-top: 100px;
+/*Central text area option*/
+#centralBlock {
+	width: 60%;
+	float: left;
 }
 
-/*Footer area*/
-#footer {
-	text-align: center;
-	margin-top: 150px;
-	font-size: 12px;
-	text-decoration: underline;
-	color: brown;
+/*Menu style option*/
+#leftMenu {
+	width: 60%;
+	float: left;
 }
