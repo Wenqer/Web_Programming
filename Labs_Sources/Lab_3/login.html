@@ -1,0 +1,41 @@
+<!--Лабораторная работа №3
+	Выполнил студент группы 535у
+	Руденко Сергей
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Login Page</title>	
+		<!--<link rel="stylesheet" type="text/css" href="css/style1.css" />-->
+		<script language="javascript" src="js/valid.js" ></script>
+
+	</head>
+<!--TODO: Refactor this -->
+	<body>
+		<div id="mainBody">
+			<form name="valform" onsubmit='return formValidator()' >
+
+				Имя: <input type="text" name="firstName"/>
+				<br/>
+				Фамилия: <input type="text" name="secondName"/>
+				<br/>	
+				Отчество: <input type="text" name="patronymic"/>
+				<br/>
+				Предпочтения:<br/>
+				<input type="checkbox" name="chk_group" value="Study">Учеба<br>
+				<input type="checkbox" name="chk_group" value="Sport">Спорт<br>
+				<input type="checkbox" name="chk_group" value="Reading">Чтение<br>
+				<input type="checkbox" name="chk_group" value="Music">Музыка<br>
+				<input type="checkbox" name="chk_group" value="Dance">Танцы<br>
+				<input type="checkbox" name="chk_group" value="Cinema">Кино<br>
+				<input type="checkbox" name="chk_group" value="Theatre">Театр<br>
+
+				<input type="submit" name="doneButton" value='Check Form' />
+			</form>		
+
+			<input type="submit" name="backbutton" value="Back" onclick="location.href='index.html'" />
+	
+		</div><!--End mainBody-->
+	</body>
+</html>
