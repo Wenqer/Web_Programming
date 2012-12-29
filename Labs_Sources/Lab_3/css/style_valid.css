@@ -1,0 +1,85 @@
+form {
+	width:320px;
+}
+
+input {
+	border:1px solid #000;
+}
+
+textarea {
+	border:1px solid #000;
+}
+
+input.error, textarea.error {
+	border: 1px solid #f00;
+}
+
+label.error{
+	font-size:12px;
+	font-style:italic;
+	color:#f00;
+	padding-bottom:5px;
+}
+
+label.error{
+	display:block;
+}
+
+#Object {
+	/* simple box */
+	position:absolute;
+	left:0px;
+	top:22em;
+	width:5em;
+	line-height:3em;
+	background:#99ccff;
+	border:1px solid #003366;
+	white-space:nowrap;
+	padding:0.5em;
+}
+
+#Box {
+	position: relative;
+	top: 50px;
+	left: -100px;
+	opacity: 0;
+	z-index: 3;
+	border-radius: 90px / 30px;
+	width: 160px;
+	height: 50px;
+	background: #fff;
+}
+
+#Box.animate {
+	animation-name: Box;
+	animation-duration: 12s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+@keyframes Box {
+
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	75% {
+		opacity: 1;
+		left: 100px;
+	}
+	
+	100% {
+		opacity: 0;
+		left: 500px;
+	}
+
+}

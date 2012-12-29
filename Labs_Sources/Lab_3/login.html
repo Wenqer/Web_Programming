@@ -7,35 +7,65 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Login Page</title>	
-		<!--<link rel="stylesheet" type="text/css" href="css/style1.css" />-->
-		<script language="javascript" src="js/valid.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/style_valid.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/valid.js" ></script>
+		<script type="text/javascript">
+			var obj = null; 
+			var direction = false;
+
+			function doMove() {
+				
+				var intPosition = parseInt(obj.style.left);
+
+				if (intPosition == 300) {
+					direction = true;
+				} else if (intPosition == 0) {
+					direction = false;
+				};
+
+				if (direction) {
+					obj.style.left = intPosition-1+'px';
+				} else {
+					obj.style.left = intPosition+1+'px';
+				};
+				
+				setTimeout(doMove,20); 
+			}
+
+			function init() {
+				obj = document.getElementById('Object');
+				obj.style.left = '0px'; 
+				doMove(); 
+			}
+			window.onload = init;
+		</script>
 
 	</head>
 <!--TODO: Refactor this -->
 	<body>
 		<div id="mainBody">
-			<form name="valform" onsubmit='return formValidator()' >
-
-				Имя: <input type="text" name="firstName"/>
-				<br/>
-				Фамилия: <input type="text" name="secondName"/>
-				<br/>	
-				Отчество: <input type="text" name="patronymic"/>
-				<br/>
-				Предпочтения:<br/>
-				<input type="checkbox" name="chk_group" value="Study">Учеба<br>
-				<input type="checkbox" name="chk_group" value="Sport">Спорт<br>
-				<input type="checkbox" name="chk_group" value="Reading">Чтение<br>
-				<input type="checkbox" name="chk_group" value="Music">Музыка<br>
-				<input type="checkbox" name="chk_group" value="Dance">Танцы<br>
-				<input type="checkbox" name="chk_group" value="Cinema">Кино<br>
-				<input type="checkbox" name="chk_group" value="Theatre">Театр<br>
-
+			<form method="post" action="#" id="form1" name="form1">
+				<label>Имя:</label> <input type="text" name="firstName"/><br/>
+				<label>Фамилия:</label> <input type="text" name="secondName"/><br/>	
+				<label>Отчество:</label> <input type="text" name="patronymic"/><br/>
+				<fieldset>
+					<legend>Предпочтения:</legend>
+					<input type="checkbox" name="checkbox1" id="checkbox1" value="Study">&nbsp;<label for="checkbox1">Учеба</label><br/>
+					<input type="checkbox" name="checkbox2" id="checkbox2" value="Sport">&nbsp;<label for="checkbox2">Спорт</label><br/>
+					<input type="checkbox" name="checkbox3" id="checkbox3" value="Reading">&nbsp;<label for="checkbox3">Чтение</label><br/>
+					<input type="checkbox" name="checkbox4" id="checkbox4" value="Music">&nbsp;<label for="checkbox4">Музыка</label><br/>
+					<input type="checkbox" name="checkbox5" id="checkbox5" value="Dance">&nbsp;<label for="checkbox5">Танцы</label><br/>
+					<input type="checkbox" name="checkbox6" id="checkbox6" value="Cinema">&nbsp;<label for="checkbox6">Кино</label><br/>
+					<input type="checkbox" name="checkbox7" id="checkbox7" value="Theatre">&nbsp;<label for="checkbox7">Театр</label><br/>
+				</fieldset>
 				<input type="submit" name="doneButton" value='Check Form' />
 			</form>		
-
-			<input type="submit" name="backbutton" value="Back" onclick="location.href='index.html'" />
-	
+			<input type="submit" name="backbutton" value="Back" onclick="location.href='index.html'" /><br/>
+			<div id="Object" style="left: 0px;">
+ 				I am obj.
+			</div>
 		</div><!--End mainBody-->
 	</body>
 </html>
