@@ -28,10 +28,13 @@ $(document).ready(function() {
 			checkbox7: "Отмечено слишком много значений, максимум допускается 3!"
 		},
 		errorPlacement: function(error, element) {
-			if (element.attr("name") == "firstName") error.insertAfter($("input[name=firstName]"));
-			if (element.attr("name") == "secondName") error.insertAfter($("input[name=secondName]"));
-			if (element.attr("name") == "patronymic") error.insertAfter($("input[name=patronymic]"));
-			if (element.attr("name") == "checkbox7") error.insertAfter($("fieldset label:last"));
+			element.each(function(el){
+				error.insertAfter($("input[name=" + el.attr("name") + "]"));
+			});
+			//if (element.attr("name") == "firstName") error.insertAfter($("input[name=firstName]"));
+			//if (element.attr("name") == "secondName") error.insertAfter($("input[name=secondName]"));
+			//if (element.attr("name") == "patronymic") error.insertAfter($("input[name=patronymic]"));
+			//if (element.attr("name") == "checkbox7") error.insertAfter($("fieldset label:last"));
 		}	
 	});
 })
