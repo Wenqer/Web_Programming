@@ -28,8 +28,8 @@ $(document).ready(function() {
 			checkbox7: "Отмечено слишком много значений, максимум допускается 3!"
 		},
 		errorPlacement: function(error, element) {
-			element.each(function(el){
-				error.insertAfter($("input[name=" + el.attr("name") + "]"));
+			element.each(function(key, el){
+				error.insertAfter($("input[name=" + $(el).attr("name") + "]"));
 			});
 			//if (element.attr("name") == "firstName") error.insertAfter($("input[name=firstName]"));
 			//if (element.attr("name") == "secondName") error.insertAfter($("input[name=secondName]"));
